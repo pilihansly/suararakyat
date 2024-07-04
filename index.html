@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SuaraRakyat</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            border-radius: 16px;
+            max-width: 800px;
+            margin: 50px auto;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .profiles {
+            display: flex;
+            justify-content: center;
+            overflow-x: auto;
+            gap: 10px;
+            padding: 10px 0;
+        }
+        .profile {
+            flex: 0 0 auto;
+            width: 100px;
+            text-align: center;
+            background: #eee;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .profile img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+        .profile h3 {
+            margin: 0;
+            font-size: 1em;
+        }
+        .profile p {
+            margin: 5px 0;
+            font-size: 0.8em;
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group select,
+        .form-group input[type="text"],
+        .form-group input[type="number"],
+        .form-group input[type="radio"],
+        .form-group textarea {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        .form-group input[type="radio"] {
+            width: auto;
+        }
+        .form-group .radio-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .form-group .radio-group label {
+            display: inline-block;
+        }
+        .submit-btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .submit-btn:hover {
+            background: #218838;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>SuaraRakyat</h1>
+        <div class="profiles">
+            <div class="profile">
+                <img src="img/aa.jpg" alt="Calon 1">
+                <h3>Ady Ansar</h3>
+            </div>
+            <div class="profile">
+                <img src="img/na.jpeg" alt="Calon 2">
+                <h3>Natsir Ali</h3>
+            </div>
+            <div class="profile">
+                <img src="img/dm.jpg" alt="Calon 3">
+                <h3>Daeng Marowa</h3>
+            </div>
+            <div class="profile">
+                <img src="img/sa.jpg" alt="Calon 3">
+                <h3>Saiful Arif</h3>
+            </div>
+            <div class="profile">
+                <img src="img/as.jpeg" alt="Calon 3">
+                <h3>Aji Sumarno</h3>
+            </div>
+        </div>
+        <h2 style="color: red;">Masa Depan Selayar, Anda Yang Tentukan!</h2>
+        <p>Silahkan jawab pertanyaan berikut!</p>
+        <form action="#" method="post">
+            <div class="form-group">
+                <label for="usia">Usia Anda:</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="usia" value="17-24 tahun" required> 17-24 tahun</label>
+                    <label><input type="radio" name="usia" value="25-34 tahun"> 25-34 tahun</label>
+                    <label><input type="radio" name="usia" value="35-44 tahun"> 35-44 tahun</label>
+                    <label><input type="radio" name="usia" value="45-54 tahun"> 45-54 tahun</label>
+                    <label><input type="radio" name="usia" value="55-64 tahun"> 55-64 tahun</label>
+                    <label><input type="radio" name="usia" value="65 tahun ke atas"> 65 tahun ke atas</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="jenis_kelamin">Jenis Kelamin:</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="jenis_kelamin" value="Laki-laki" required> Laki-laki</label>
+                    <label><input type="radio" name="jenis_kelamin" value="Perempuan"> Perempuan</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="pekerjaan">Pekerjaan:</label>
+                <select id="pekerjaan" name="pekerjaan" required>
+                    <option value="Petani">Petani</option>
+                    <option value="Nelayan">Nelayan</option>
+                    <option value="Pedagang">Pedagang</option>
+                    <option value="Buruh">Buruh</option>
+                    <option value="Pegawai negeri sipil">Pegawai negeri sipil</option>
+                    <option value="Karyawan swasta">Karyawan swasta</option>
+                    <option value="Pengusaha">Pengusaha</option>
+                    <option value="Profesi lain">Profesi lain (sebutkan)</option>
+                </select>
+                <input type="text" id="pekerjaan_lain" class="hidden" style="margin-top: 8px;" name="pekerjaan_lain" placeholder="Sebutkan profesi lain jika ada">
+            </div>
+            <div class="form-group">
+                <label for="penghasilan">Penghasilan Bulanan:</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="penghasilan" value="Kurang dari Rp1.000.000" required> Kurang dari Rp1.000.000</label>
+                    <label><input type="radio" name="penghasilan" value="Rp1.000.000 - Rp2.000.000"> Rp1.000.000 - Rp2.000.000</label>
+                    <label><input type="radio" name="penghasilan" value="Rp2.000.000 - Rp3.000.000"> Rp2.000.000 - Rp3.000.000</label>
+                    <label><input type="radio" name="penghasilan" value="Rp3.000.000 - Rp4.000.000"> Rp3.000.000 - Rp4.000.000</label>
+                    <label><input type="radio" name="penghasilan" value="Rp4.000.000 - Rp5.000.000"> Rp4.000.000 - Rp5.000.000</label>
+                    <label><input type="radio" name="penghasilan" value="Lebih dari Rp5.000.000"> Lebih dari Rp5.000.000</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="pendidikan">Tingkat Pendidikan:</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="pendidikan" value="Tidak sekolah" required> Tidak sekolah</label>
+                    <label><input type="radio" name="pendidikan" value="SD/MI"> SD/MI</label>
+                    <label><input type="radio" name="pendidikan" value="SMP/MTs"> SMP/MTs</label>
+                    <label><input type="radio" name="pendidikan" value="SMA/MA/SMK"> SMA/MA/SMK</label>
+                    <label><input type="radio" name="pendidikan" value="Diploma"> Diploma</label>
+                    <label><input type="radio" name="pendidikan" value="Sarjana"> Sarjana</label>
+                    <label><input type="radio" name="pendidikan" value="Pascasarjana"> Pascasarjana</label>
+                </div>
+            </div>
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('pekerjaan').addEventListener('change', function() {
+            var pekerjaanLain = document.getElementById('pekerjaan_lain');
+            if (this.value === 'Profesi lain') {
+                pekerjaanLain.classList.remove('hidden');
+            } else {
+                pekerjaanLain.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+</html>
